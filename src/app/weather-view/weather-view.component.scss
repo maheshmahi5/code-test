@@ -1,0 +1,44 @@
+.weather-data {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.divide {
+    display: flex;
+}
+
+.right-border {
+    border-right: groove;
+}
+
+.search-field {
+    margin: 5px
+}
+
+.date-field {
+    background-color: orange;
+    border-bottom: groove;
+}
+
+.field-borders{
+    border-bottom: groove;
+}
+
+.field-right-border {
+    border-bottom: groove;
+}
+
+.temp-borders{
+    border-bottom: groove;
+}
+
+.field-margins {
+    margin: 2px;
+}
+
+.weather-card {
+    display: block;
+    margin:10px;
+    text-align: center;
+    border: groove
+}

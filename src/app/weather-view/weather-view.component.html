@@ -1,0 +1,51 @@
+<div class="weather-container">
+   <h1>Weather in your city</h1>
+    <div> 
+      <input id="city" [(ngModel)]="searchInput" placeholder="Enter city" class="search-field" />
+      <button (click)="onSearchData()">Search</button>
+   </div>
+
+   @if(weatherData.length > 0) {
+       <div class="weather-data">
+      @for (day of weatherData; track $index) {
+       <div class="weather-card">
+           <div class="date-field">Date:{{ day?.['local_date'] }}</div> 
+           <div class="field-borders">
+            Temperature
+           </div>
+           <div class="divide">
+            <span class="right-border">
+               <div class="field-borders">
+                  Min
+                 </div>
+                 <div class="field-borders">
+                  {{day?.['main']['temp_min']}}
+                 </div>
+                 <div class="field-borders">
+                  Pressure
+                 </div>
+                 <div>
+                  Humidity
+                 </div>
+            </span>
+            <span>
+               <div class="field-borders">
+                  Max
+                 </div>
+                 <div class="field-borders">
+                  {{day?.['main']['temp_max']}}
+                 </div>
+                 <div class="field-borders">
+                  {{day?.['main']['pressure']}}
+                 </div>
+                 <div>
+                  {{day?.['main']['humidity']}}
+                 </div>
+            </span>
+           </div>
+       </div>
+      }
+   </div>
+
+   }
+</div>
